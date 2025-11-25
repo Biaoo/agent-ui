@@ -131,8 +131,6 @@ agent-ui-project/
 - [Agno](https://docs.agno.com) - AI Agent development framework
 - [AG-UI Protocol](https://docs.ag-ui.com) - Agent-UI communication protocol
 - [CopilotKit](https://copilotkit.ai) - AI agent frontend integration framework
-- [Next.js](https://nextjs.org) - React development framework
-- [Tailwind CSS](https://tailwindcss.com) - CSS framework
 
 ## License
 

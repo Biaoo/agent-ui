@@ -132,8 +132,6 @@ agent-ui-project/
 - [Agno](https://docs.agno.com) - AI Agent 开发框架
 - [AG-UI Protocol](https://docs.ag-ui.com) - Agent-UI 通信协议
 - [CopilotKit](https://copilotkit.ai) - AI agent 前端集成框架
-- [Next.js](https://nextjs.org) - React 开发框架
-- [Tailwind CSS](https://tailwindcss.com) - CSS 框架
 
 ## 许可证
 
