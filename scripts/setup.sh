@@ -110,13 +110,15 @@ setup_backend() {
 # Setup frontend environment
 setup_frontend() {
     print_header "Setting up Frontend"
-    
+
     cd frontend
-    
+
     # Install dependencies
+    # Use --legacy-peer-deps to resolve peer dependency conflicts
+    # (e.g., @ag-ui/client version mismatch between @copilotkit/runtime and @ag-ui/langgraph)
     print_status "Installing Node.js dependencies..."
-    npm install
-    
+    npm install --legacy-peer-deps
+
     cd ..
     print_status "Frontend setup completed!"
 }
