@@ -1,0 +1,26 @@
+diff --git a/node_modules/@copilotkit/runtime-client-gql/dist/chunk-TDZBGVZB.mjs b/node_modules/@copilotkit/runtime-client-gql/dist/chunk-TDZBGVZB.mjs
+index f787be5..7046aa6 100644
+--- a/node_modules/@copilotkit/runtime-client-gql/dist/chunk-TDZBGVZB.mjs
++++ b/node_modules/@copilotkit/runtime-client-gql/dist/chunk-TDZBGVZB.mjs
+@@ -221,8 +221,20 @@ function getPartialArguments(args) {
+   try {
+     if (!args.length)
+       return {};
+-    return JSON.parse(untruncateJson(args.join("")));
++    const joined = args.join("");
++    // PATCH: Try direct parse first, then untruncateJson as fallback
++    // untruncateJson can sometimes corrupt valid JSON
++    let result;
++    try {
++      result = JSON.parse(joined);
++    } catch (directParseError) {
++      // Fallback to untruncateJson for truly truncated JSON
++      result = JSON.parse(untruncateJson(joined));
++    }
++    console.log("[PATCH DEBUG] getPartialArguments parsed:", result);
++    return result;
+   } catch (e) {
++    console.log("[PATCH DEBUG] getPartialArguments parse error:", e, "args:", args);
+     return {};
+   }
+ }

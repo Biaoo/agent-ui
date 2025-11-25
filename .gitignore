@@ -1,0 +1,20 @@
+# python
+.venv/
+__pycache__/
+*.pyc
+uv.lock
+*.egg-info/
+.pytest_cache/
+
+# 
+package-lock.json
+node_modules/
+
+# env
+.env
+
+# cache
+.DS_Store
+
+# docs
+docs/

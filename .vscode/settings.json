@@ -1,0 +1,28 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/backend/.venv/bin/python",
+    "markdownlint.config": {
+        "MD001": false,
+        "MD024": false,
+        "MD025": false,
+        "MD029": false,
+        "MD033": false,
+        "MD036": false,
+        "MD040": false,
+        "MD042": false,
+        "MD046": false
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/__pycache__/**": true,
+    }
+}

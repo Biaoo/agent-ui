@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-ui-backend"
+version = "0.1.0"
+description = "AI Agent backend with Agno framework"
+authors = [{ name = "Biao", email = "872299269@qq.com" }]
+requires-python = ">=3.12"
+dependencies = [
+    "ag-ui-protocol>=0.1.10",
+    "agno>=2.2.13",
+    "fastapi>=0.121.2",
+    "loguru>=0.7.3",
+    "openai>=2.8.0",
+    "python-dotenv>=1.2.1",
+    "requests>=2.32.5",
+    "tavily-python>=0.7.13",
+    "types-requests>=2.32.4.20250913",
+    "urllib3>=2.5.0",
+    "uvicorn>=0.38.0",
+    "websockets>=15.0.1",
+]
+
+[project.scripts]
+app = "src.server:main"
+app-dev = "src.server:main_dev"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+extend-ignore = ["F401", "F841", "E722"]
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = ["black>=25.11.0", "mypy>=1.18.2", "pytest>=9.0.1", "ruff>=0.14.5"]
