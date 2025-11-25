@@ -21,7 +21,7 @@ With this question in mind, I began researching industry solutions. [CopilotKit]
 
 ## Demo
 
-<!-- TODO: Add demo video here -->
+https://github.com/user-attachments/assets/f479516c-9d92-4a3e-8dad-b82e2677d4b3
 
 ## Quick Start
 

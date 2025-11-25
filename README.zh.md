@@ -21,7 +21,7 @@
 
 ## 演示
 
-<!-- TODO: 在此添加演示视频 -->
+https://github.com/user-attachments/assets/f479516c-9d92-4a3e-8dad-b82e2677d4b3
 
 ## 快速开始
 
